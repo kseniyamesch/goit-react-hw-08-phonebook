@@ -22,13 +22,13 @@ export default function LoginView() {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-dispatch(authOperations.logIn({email, password}));
-setEmail('');
-setPassword('');
+    dispatch(authOperations.logIn({ email, password }));
+    setEmail('');
+    setPassword('');
   };
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
@@ -43,6 +43,7 @@ setPassword('');
         <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
+          name="password"
           placeholder="Password"
           onChange={handleChange}
         />

@@ -22,10 +22,11 @@ export default function ContactList() {
       {isError && <p>Something went wrone. {error}</p>}
       <ul className={s.ul}>
         {renderContact().map(contact => {
+          console.log(contact);
           return (
             <li key={contact.id} className={s.item}>
               <span>{contact.name}:</span>
-              <span>{contact.phone}</span>
+              <span>{contact.number}</span>
               <button type="button" disabled={isLoading} onClick={() => handleDelete(contact.id)}>
                 {isLoading ? 'Deleting..' : 'Delete'}
               </button>

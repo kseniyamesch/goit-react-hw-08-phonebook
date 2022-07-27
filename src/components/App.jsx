@@ -5,7 +5,7 @@ import HomeView from 'Views/HomeView';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter';
-import AppBar from './AppBar/AppBar';
+import AppBar from './UserMenu/AppBar/AppBar';
 import RegisterView from '../Views/RegisterView/RegisterView';
 import LoginView from 'Views/LoginView';
 
