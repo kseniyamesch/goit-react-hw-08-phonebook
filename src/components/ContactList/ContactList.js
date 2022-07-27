@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Button } from 'react-bootstrap';
 import { useDeleteContactMutation } from '../../services/contactsAPI';
 import s from './ContactList.module.css';
 import { useGetContactsQuery } from '../../services/contactsAPI';
@@ -16,6 +17,8 @@ export default function ContactList() {
     );
   };
 
+
+
   return (
     <>
       {isFetching && <p style={{ textAlign: 'center' }}>Загружаем...</p>}
@@ -27,9 +30,9 @@ export default function ContactList() {
             <li key={contact.id} className={s.item}>
               <span>{contact.name}:</span>
               <span>{contact.number}</span>
-              <button type="button" disabled={isLoading} onClick={() => handleDelete(contact.id)}>
+              <Button variant="primary" type="button" disabled={isLoading} onClick={() => handleDelete(contact.id)}>
                 {isLoading ? 'Deleting..' : 'Delete'}
-              </button>
+              </Button>
             </li>
           );
         })}

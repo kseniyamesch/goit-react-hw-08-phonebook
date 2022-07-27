@@ -8,6 +8,7 @@ import Filter from './Filter';
 import AppBar from './UserMenu/AppBar/AppBar';
 import RegisterView from '../Views/RegisterView/RegisterView';
 import LoginView from 'Views/LoginView';
+import { PrivateRoute } from './PrivateRoute';
 
 export function App() {
   return (
@@ -16,17 +17,19 @@ export function App() {
 
       <Routes>
         <Route path="/" element={<HomeView />} />
-        <Route path="register" element={<RegisterView />} />
+        <Route 
+        path="register" 
+        element={<RegisterView />} />
         <Route path="login" element={<LoginView />} />
         <Route
           path="contacts"
           element={
-            <>
+            <PrivateRoute>
               <ContactForm />
               <h2>Contacts</h2>
               <Filter></Filter>
               <ContactList />
-            </>
+            </PrivateRoute>
           }
         />
       </Routes>

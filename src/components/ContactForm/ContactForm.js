@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
+import { Button } from 'react-bootstrap';
 import s from './ContactForm.module.css';
 import {
   useAddContactMutation,
@@ -76,9 +77,9 @@ export default function ContactForm() {
           required
         />
       </label>
-      <button type="submit" disabled={isLoading}>
+      <Button type="submit" disabled={isLoading}>
         {isLoading ? 'Adding..' : 'Add contact'}
-      </button>
+      </Button>
     </form>
   );
 }
