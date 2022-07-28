@@ -6,9 +6,11 @@ import s from './ContactList.module.css';
 import { useGetContactsQuery } from '../../services/contactsAPI';
 
 export default function ContactList() {
+
   const filter = useSelector(state => state.filter.value);
 
   const { data = [], isError, error, isFetching, isLoading } = useGetContactsQuery();
+
   const [handleDelete] = useDeleteContactMutation();
 
   const renderContact = () => {
@@ -16,8 +18,6 @@ export default function ContactList() {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   };
-
-
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useLocation, Navigate } from 'react-router-dom';
 
-export function PrivateRoute({ children }) {
+export default function PrivateRoute({ children }) {
     let location = useLocation();
     const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   
