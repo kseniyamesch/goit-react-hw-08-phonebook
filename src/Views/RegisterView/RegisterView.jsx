@@ -12,7 +12,6 @@ const [password, setPassword] = useState('')
 const dispatch = useDispatch();
 
 const handleChange = ({ target: { name, value } }) => {
-  console.log({ target: { name, value } })
   switch (name) {
     case 'name':
       return setName(value);

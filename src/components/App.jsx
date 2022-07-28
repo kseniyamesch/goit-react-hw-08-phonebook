@@ -50,6 +50,7 @@ dispatch(authOperations.fetchCurrentUser())
             </PrivateRoute>
           }
         />
+        <Route path="*" element={<HomeView/>} />
       </Routes>
     </Container>
   );

@@ -19,7 +19,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
     return data;
   } catch (error) {
     alert('Something went wrong! Please try again');
-    return error;
+    return;
   }
 });
 
@@ -30,7 +30,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     return data;
   } catch (error) {
     alert('Wrong email or password!');
-    return error;
+    return;
   }
 });
 

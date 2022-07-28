@@ -48,6 +48,7 @@ export default function ContactForm() {
 
   return (
     <form className={s.form} onSubmit={handleSubmit}>
+      <h2 className={s.header}>Add contact to phone-book</h2>
       <label htmlFor={inputNameId} className={s.label}>
         {' '}
         Name
@@ -77,7 +78,7 @@ export default function ContactForm() {
           required
         />
       </label>
-      <Button type="submit" disabled={isLoading}>
+      <Button type="submit" disabled={isLoading} className={s.btn}>
         {isLoading ? 'Adding..' : 'Add contact'}
       </Button>
     </form>

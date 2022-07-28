@@ -8,6 +8,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 }
 
 h1, h2 {
@@ -38,4 +39,13 @@ font-weight: 600;
 button:hover {
     box-shadow: 2px 3px 3px gray;
     background-color: rgb(75, 152, 197);
+}
+
+.header {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.btn {
+    margin-top: 20px;
 }

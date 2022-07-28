@@ -34,7 +34,7 @@ export const store = configureStore({
     [contactsApi.reducerPath]: contactsApi.reducer,
     filter: filterSlice,
   },
-  middleware,
+  middleware : middleware.concat(contactsApi.middleware),
   devTools: true,
 });
 
